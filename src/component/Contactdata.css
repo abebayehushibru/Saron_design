@@ -1,0 +1,256 @@
+body:has(.showform) {
+    overflow: hidden;
+}
+
+.form {
+    position: fixed;
+    top: 0%;
+    background-color: rgb(0, 0, 0, 0.8);
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.showform {
+    display: flex;
+
+}
+
+.contactContainer {
+    position: relative;
+    margin: 2rem 6rem;
+    width: calc(100% - 12rem);
+    height: calc(100% - 2rem);
+
+}
+
+.contactContainer h3 {
+    padding: 0 0 1rem;
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.formheader {
+    position: relative;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    
+}
+
+.orderformheader {
+    justify-content: space-between;
+    align-items: center;
+    background: #c8f2f9;
+    padding: 10px 20px;
+
+}
+
+.orderformheader h3 {
+   margin: 0%;
+}
+
+.formcomponent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 0%;
+}
+
+.orderform {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 0%;
+}
+.orderform >span{
+    margin-bottom: 5px;
+  
+    text-decoration: underline;
+    font-style: italic;
+}
+.orderform h2{
+    margin: 5px ;
+    margin-right: 30px;
+  text-align: end;
+}
+
+.items {
+    position: relative;
+    display: flex;
+    align-items: center;
+justify-content: space-around;
+height:50px;
+}
+.items:not(:last-child) {
+    padding-bottom: 10px;
+   border-bottom: 1px solid black;
+   margin-bottom: 5px;
+}
+.items>div{
+    width: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+   
+}
+ 
+.items div img {
+    height: 50px;
+    width: 50px;
+object-fit: cover;
+}
+.items div>span:nth-child(2){
+    width: calc((100% - 120px)/2 - 10px);
+    margin-left: 10px;
+    margin: 0px 10px;
+    font-weight: 500;
+    word-wrap:wrap;
+}
+.items div>span:nth-child(4){
+position: relative;
+width: calc((100% - 120px)/2 - 10px);
+margin-right: 10px;
+text-align: center;
+font-weight: bold;
+    color: rgb(96, 96, 96);
+}
+.items div>input{
+width: 50px;
+padding-left: 5px;
+height: 30px;
+text-align: center;
+border: 1px solid black;
+}
+
+.items>img {
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.items>img:hover {
+    background-color: rgb(255, 242, 0);
+}
+.items>img:active {
+    background-color: rgb(255, 0, 0);
+}
+
+.formcomponent>div {
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    justify-content: space-around;
+}
+
+.formcomponent>div:nth-child(1) {
+    display: grid;
+
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+}
+
+.formcomponent input {
+    outline: 1pX solid rgb(0, 0, 0, 0.1);
+    height: 40px;
+
+    border-radius: 20px;
+    border: none;
+    padding-left: 20px;
+    margin: 0%;
+    margin-bottom: 15px;
+
+}
+
+.btn {
+    background-color: white;
+}
+
+.formcomponent>div:nth-child(2) {
+    position: relative;
+    width: 100%;
+
+}
+
+.formcomponent>div:nth-child(2) input {
+
+    width: calc(100% - 20px);
+
+}
+
+.formcomponent input:focus,
+.formcomponent textarea:focus {
+    outline: 1px #01959a;
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: .5px 1px 3px #01959a;
+
+}
+
+.formcomponent:has(div input:focus)>p,
+.formcomponent:has(div textarea:focus)>p {
+    content: "";
+}
+
+.formcomponent textarea {
+    max-width: calc(100% - 20px);
+    min-width: calc(100% - 20px);
+    min-height: 100px;
+    max-height: auto;
+    border-radius: 20px;
+    border: none;
+    padding-left: 20px;
+    margin-bottom: 6px;
+    padding-top: 20px;
+    outline: solid rgb(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width:850px) {
+    .contactContainer {
+        margin: 2rem 2rem;
+        width: calc(100% - 4rem);
+
+    }
+
+    .formcomponent>div:nth-child(1) {
+        grid-template-columns: 100%;
+    }
+
+    .formcomponent>div {
+
+        max-width: 400px;
+    }
+}
+
+
+

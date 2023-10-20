@@ -1,0 +1,22 @@
+.pro-container{
+    position: relative;
+    margin: 2rem 3rem ;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assert/black-wommen.jpg");
+    background-size: 100%;
+
+    background-repeat: repeat;
+    padding-top: 100px;
+}
+.pro-container>div{
+margin-bottom: 20px;
+width: 350px;
+padding-left: 30px;
+}
+.pro-container>div>div{
+margin-top: 30px;
+ width: 100%;
+ display: flex;
+ justify-content: space-around;
+}
